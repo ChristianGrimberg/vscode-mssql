@@ -1,4 +1,4 @@
-import {RequestType} from 'vscode-languageclient';
+import { RequestType } from 'vscode-languageclient';
 
 // --------------------------------- < Version Request > -------------------------------------------------
 
@@ -67,6 +67,10 @@ export class SaveResultsRequestParams {
 
 export class SaveResultsAsCsvRequestParams extends SaveResultsRequestParams {
     includeHeaders: boolean = true;
+    delimiter: string = ',';
+    lineSeperator: string = undefined;
+    textIdentifier: string = '\"';
+    encoding: string = 'utf-8';
 }
 
 export class SaveResultsAsJsonRequestParams extends SaveResultsRequestParams {
